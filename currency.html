@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="currency.css">
+</head>
+<body>
+    <header>
+        <div class="nav">
+           The Currency Converter
+        </div>
+    </header>
+
+    <div class="main">
+        <div class="con">
+           <h2>1 INR to USD Exchange Rate Today</h2> 
+          
+           <div class="box">
+           <div class="amount">
+           <p>Amount</p> 
+            <input type="number" placeholder="$100"  >
+           </div>
+            </div>
+
+            <div class="select">
+                <div class="from">
+                <h3>From</h3>
+                <img src="https://flagsapi.com/IN/shiny/64.png" alt="">
+                <select name="from" id="from">
+                    <option value="IND" selected>IND</option>
+                    <option value="USA">USD</option>
+                    <option value="AUD">AUD</option>
+                    <option value="EURO">EURO</option>
+                    <option value="ID">IDR</option>
+                </select></div>
+
+                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+
+                <div class="To">
+                    <h3>To</h3>
+                    <img src="https://flagsapi.com/US/shiny/64.png" alt="">
+                    <select name="from" id="To">
+                        <option value="IND" >IND</option>
+                        <option value="USA" selected>USD</option>
+                        <option value="AUD">AUD</option>
+                        <option value="EURO">EURO</option>
+                        <option value="ID">IDR</option>
+                    </select></div>
+
+                <button class="submit">Convert</button>
+            </div>
+
+            <div class="result">
+                <p id="result">INR</p>
+                <p>1000</p>
+                <p>=</p>
+                <p>1000</p>
+                <p>USD</p>
+            </div>
+
+        </div>
+    
+    </div>
+
+    <script src="currency.js" ></script>
+</body>
+</html>
