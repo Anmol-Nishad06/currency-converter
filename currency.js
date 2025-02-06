@@ -168,13 +168,8 @@ for(let i=0;i<2;i++){
         newoption.innerText=countryList[code];
         newoption.value=code;
         dropdown[i].append(newoption)
-        
 }
 }
-
-console.log(dropdown[1]);
-
-
 const rate= async ()=>{
     let response= await fetch(URL);
 
@@ -187,3 +182,17 @@ const rate= async ()=>{
     
 }
 
+for (let select of dropdown){      
+  select.addEventListener("change", (evt) => {
+    updateFlag(evt.target);
+  });
+}
+
+const updateFlag=(element)=>{
+        let code =element.value;
+        console.log(code);
+        let ccode=countryList[code]
+        let newsrc=`https://flagsapi.com/${ccode}/shiny/64.png`
+        let img= element.parentElement.querySelectorAll("img");
+        img[0].src=newsrc;
+}
